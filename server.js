@@ -19,4 +19,4 @@ app.get(re, function(req) {
     throw err;
 });
 
-app.listen(5000, console.log('This is a small echo server for testing HTTP status codes. E.g.:\n\tGET /404 returns HTTP status 404 and message Not Found\n\tGET /415 returns HTTP status 415 and message Unsupported Media Type\n'));
+app.listen(process.env.PORT || 5000, console.log('This is a small echo server for testing HTTP status codes. E.g.:\n\tGET /404 returns HTTP status 404 and message Not Found\n\tGET /415 returns HTTP status 415 and message Unsupported Media Type\n'));
