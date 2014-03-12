@@ -5,7 +5,7 @@ var app = require('express')();
 app.use(app.router);
 
 var re = new RegExp('^\/(' + Object.keys(statusCodes).join('|') + ')$');
-app.get(re, function(req) {
+app.get(re, function(req, res) {
     var status = req.params[0];
     res.send(status, statusCodes[status]);
 });
